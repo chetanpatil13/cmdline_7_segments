@@ -26,7 +26,6 @@
 * SOFTWARE.
 */
 
-
 #pragma once
 
 class SevenSegments {
@@ -217,6 +216,6 @@ private:
 
 public:
     SevenSegments() = default;
-    void printDigit(unsigned char number);
+    void printDigit(unsigned char digit);
     void printLetter(unsigned char ch);
 };

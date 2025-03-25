@@ -31,8 +31,8 @@
 
 using namespace std;
 
-void SevenSegments::printDigit(unsigned char number) {
-	for (int row = (number * 3); row < ((number * 3) + 3); row++) {
+void SevenSegments::printDigit(unsigned char digit) {
+	for (int row = (digit * 3); row < ((digit * 3) + 3); row++) {
 		for (int col = 0; col < 3; col++) {
 			cout << digits_0_9[row][col];
 		}
