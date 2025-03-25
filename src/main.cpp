@@ -28,21 +28,54 @@
 
 
 #include<iostream>
+#include<windows.h>
 #include "seven_segments.hpp"
 
 using namespace std;
 
+void demo(void) {
+	SevenSegments sevenSegment;
+
+	for (int num = 0; num < 10; num++)
+		sevenSegment.printDigit(num);
+
+	for (char ch = 'A'; ch <= 'Z'; ch++)
+		sevenSegment.printLetter(ch);
+}
+
+void numberCouting() {
+	SevenSegments sevenSegment;
+
+	for (int num = 0; num < 10; num++) {
+		sevenSegment.printDigit(num);
+		Sleep(750);
+		system("cls");
+	}
+}
+
+void lettersInLoop() {
+	SevenSegments sevenSegment;
+	
+	for (char ch = 'A'; ch <= 'Z'; ch++) {
+		sevenSegment.printLetter(ch);
+		Sleep(750);
+		system("cls");
+	}
+}
 
 int main(){
 	cout << "Command Line : 7 Segments Demo :: " << endl;
 
-	SevenSegments sevenSegment;
+	// Uncomment below line to print digits and letters once
+	//demo();
 
-	for (int num=0; num<10; num++)
-		sevenSegment.printDigit(num);
-
-    for (char ch='A'; ch<='Z'; ch++)
-		sevenSegment.printLetter(ch);
+	while (true) {
+		// Uncomment to print letters A to Z in loop 
+		lettersInLoop();
+		
+		// Uncomment to print digits 0 to 9 in loop 
+		// numberCouting();
+	}
 
 	return 0;
 }
