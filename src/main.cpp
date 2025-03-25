@@ -32,7 +32,6 @@
 
 using namespace std;
 
-
 int main(){
 	cout << "Command Line : 7 Segments Demo :: " << endl;
 
